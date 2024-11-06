@@ -4,7 +4,23 @@ initPrintOut(document.getElementById("txtOut"));
 
 printOut("--- Part 1 ----------------------------------------------------------------------------------------------");
 /* Put your code below here!*/
-printOut("Replace this with you answer!");
+
+
+function todaysDate(){
+
+    const todaysDate = new Date();
+    const day = todaysDate.getDay();
+    const month = todaysDate.getMonth();
+    const date = todaysDate.getDate();
+    const year = todaysDate.getFullYear();
+    const dayMonthValues = {
+        days: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday",],
+        month: ["January", "February", "Mars", "April", "May", "Jun", "July", "August", "September", "October", "November", "December"]
+    }
+    printOut(dayMonthValues.days[day] + ", " + dayMonthValues.month[month] + " " + date + ", " + year)
+}
+
+todaysDate()
 printOut(newLine);
 
 printOut("--- Part 2 ----------------------------------------------------------------------------------------------");
